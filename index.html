@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+  <style>
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="bg-gray-800">
+    <div class="container mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <div>
+          <a href="#" class="text-white font-bold text-xl">My Website</a>
+        </div>
+        <div>
+          <a href="#" class="text-gray-300 hover:text-white px-3">Home</a>
+          <a href="#" class="text-gray-300 hover:text-white px-3">About</a>
+          <a href="#" class="text-gray-300 hover:text-white px-3">Contact</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 class="text-2xl font-bold mb-6">Enter Paper Details</h1>
+    <form>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="abstract">Abstract:</label>
+        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="abstract" name="abstract" rows="15" placeholder="Enter paper abstract"></textarea>
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="field">Field of Study:</label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="field" name="field" type="text" placeholder="Enter field of study">
+      </div>
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="output">Output/Result:</label>
+        <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="output" name="output" rows="10" readonly></textarea>
+      </div>
+      <div>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Submit</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
